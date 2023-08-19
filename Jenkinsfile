@@ -17,5 +17,15 @@ pipeline{
                 git branch : "master", credentialsId:"github", url:"https://github.com/solehudin5699/demo-e2e-pipeline"
             }
         }
+        stage('Build Application'){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+        stage('Test Application'){
+            steps{
+                sh "mvn test"
+            }
+        }
     }
 }
