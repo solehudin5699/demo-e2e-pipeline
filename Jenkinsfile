@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Checkout from SCM'){
             steps{
-                git branch : "master", credentialsId:"macosx-demo-cicd", url:"https://github.com/solehudin5699/demo-e2e-pipeline"
+                git branch : "master", credentialsId:"github", url:"https://github.com/solehudin5699/demo-e2e-pipeline"
             }
         }
     }
